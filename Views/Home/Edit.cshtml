@@ -1,0 +1,56 @@
+@model CRUDelicious.Models.Dish
+<br>
+<br>
+<h1 class="text-center">Add a Dish!</h1>
+<br>
+<a href="/">Home</a>
+
+<div class="row inline-block">
+    <form asp-action="Edit" asp-controller="Home" method="post">
+    <div class="col-sm">
+            <span style="color: red;" asp-validation-for="Name"></span>
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Name" value="@Model.Name" class="form-control-plaintext">
+            </div>
+        </div>
+        <span style="color: red;"  asp-validation-for="Chef"></span>
+        <div class="form-group row">
+            <label asp-for="Chef" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Chef" value="@Model.Chef" class="form-control-plaintext">
+            </div>
+        </div>
+        <span style="color: red;"  asp-validation-for="Calories"></span>
+        <div class="form-group row">
+            <label asp-for="Calories" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Calories" value="@Model.Calories" class="form-control-plaintext">
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="col-sm">
+        <span style="color: red;"  asp-validation-for="Tastiness"></span>
+        <div class="form-group row">
+            <label asp-for="Tastiness" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <input asp-for="Tastiness" value="@Model.Tastiness" class="form-control-plaintext">
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-sm">
+        <span style="color: red;"  asp-validation-for="Description"></span>
+        <div class="form-group row">
+            <label asp-for="Description" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                <textarea asp-for="Description" value="@Model.Description" class="form-control-plaintext">Description</textarea>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Edit user">   
+    </div>
+    </form>
+</div>
